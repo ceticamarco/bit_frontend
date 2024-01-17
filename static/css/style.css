@@ -1,4 +1,5 @@
 :root {
+    --fg: #dfe1e2;
     --bg: #111111;
     --btn-bg: #252525;
     --btn-fg: #94cdf3;
@@ -6,34 +7,66 @@
 }
 
 body {
+    color: var(--fg);
     background-color: var(--bg);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
 }
 
+body {
+    max-width: 900px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+hr {
+    border-color: #1b1a1a;
+}
+
+a, a:visited {
+    color: var(--fg);
+}
+
 .navbar {
-    margin: 20px auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 35px;
     text-align: center;
 }
 
-.navbar-link {
+.button {
     display: inline-block;
     background-color: var(--btn-bg);
     padding: 5px;
     border-radius: 5px;
 }
 
-.navbar-link > a {
+.button > a {
     text-decoration: none;
     color: var(--btn-fg);
 }
 
-.navbar-link > a:hover {
+.button > a:hover {
     color: var(--btn-hover);
+}
+
+footer {
+    font-size: 13px;
+    margin: 35px auto;
+    text-align: center;
+}
+
+footer > #copy_year {
+    display: inline-block;
 }
 
 @media (max-width: 300px) {
     body {
         font-size: 13px;
+    }
+
+    footer {
+        font-size: 10px;
     }
 }

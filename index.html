@@ -10,23 +10,34 @@
     </head>
     <body>
         <div class="navbar">
-            <div class="navbar-link">
+            <div class="button">
                 <a href="/">Home</a>
             </div>
-            <div class="navbar-link">
+            <div class="button">
                 <a href="#">New</a>
             </div>
-            <div class="navbar-link">
+            <div class="button">
                 <a href="#">Search</a>
             </div>
-            <div class="navbar-link">
+            <div class="button">
                 <a href="#">About</a>
             </div>
-            <div class="navbar-link">
+            <div class="button">
                 <a href="#">ToS</a>
             </div>
+            <hr />
         </div>
+        <main>
+                Hello World
+        </main>
 
+        <footer>
+            &copy; <div id="copy_year"></div> by <a href="https://marcocetica.com">Marco Cetica</a>
+        </footer>
         
     </body>
+
+    <script>
+        document.getElementById("copy_year").innerText = new Date().getFullYear();
+    </script>
 </html>
