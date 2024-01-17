@@ -1,0 +1,39 @@
+:root {
+    --bg: #111111;
+    --btn-bg: #252525;
+    --btn-fg: #94cdf3;
+    --btn-hover: #579ac7;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.navbar {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.navbar-link {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.navbar-link > a {
+    text-decoration: none;
+    color: var(--btn-fg);
+}
+
+.navbar-link > a:hover {
+    color: var(--btn-hover);
+}
+
+@media (max-width: 300px) {
+    body {
+        font-size: 13px;
+    }
+}
