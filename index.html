@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
         <meta name="description" content="Bit Text Sharing" />
         <link rel="canonical" href="https://bit.marcocetica.com/" />
         <link rel="stylesheet" href="/static/css/style.css" />
@@ -14,21 +14,48 @@
                 <a href="/">Home</a>
             </div>
             <div class="button">
-                <a href="#">New</a>
+                <a href="#">Search</a>
             </div>
             <div class="button">
-                <a href="#">Search</a>
+                <a href="#">Sign Up</a>
             </div>
             <div class="button">
                 <a href="#">About</a>
             </div>
-            <div class="button">
-                <a href="#">ToS</a>
-            </div>
             <hr />
         </div>
         <main>
-                Hello World
+                <h1 class="title">Add New Post</h1>
+                <form class="bit-form" method="POST" onsubmit="#">
+                    <div class="form-group">
+                        <label for="title" class="bit-form-label">Title</label>
+                        <input type="text" name="title" class="bit-form-input" />
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="exp" class="bit-form-label">Expiration date</label>
+                        <input type="date" name="exp" class="bit-form-input" />
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="content" class="bit-form-label">Content</label>
+                        <textarea name="content" class="bit-form-input"></textarea>
+                    </div>
+                
+                    <h1 class="subtitle">Sign In</h1>
+                
+                    <div class="form-group">
+                        <label for="email" class="bit-form-label">Email</label>
+                        <input type="email" name="email" class="bit-form-input" />
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="password" class="bit-form-label">Password</label>
+                        <input type="password" name="password" class="bit-form-input" />
+                    </div>
+                
+                    <input type="submit" name="send" class="bit-form-button" value="ADD NEW POST"/>
+                </form>
         </main>
 
         <footer>
