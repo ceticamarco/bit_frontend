@@ -118,10 +118,24 @@ textarea {
     height: 50vh;
 }
 
-#error-panel {
+.error-panel {
     display: none;
     margin: 30px 0;
     color: var(--error);
+}
+
+.result-panel {
+    display: none;
+}
+
+.metadata {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.metadata-el {
+    color: var(--btn-fg);
+    font-weight: bold;
 }
 
 

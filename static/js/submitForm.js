@@ -36,7 +36,7 @@ const submitForm = (event) => {
     fetch("https://bit.marcocetica.com/api/posts/new", {
         method: "POST",
         headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
         },
         body: JSON.stringify(form_data),
     })
@@ -44,16 +44,18 @@ const submitForm = (event) => {
         if(!response.ok) {
             return response.json().then(error => {
                 throw error;
-            })
+            });
         }
 
         return response.json();
     })
     .then(data => {
         console.log(data);
+        // Redirect user to new post
+        window.location.href = `/search?id=${data.post_id}`;
     })
     .catch(data => {
-        const error_panel = document.getElementById("error-panel");
+        const error_panel = document.querySelector(".error-panel");
         error_panel.style.display = "block";
         error_panel.innerHTML = `<b>ERROR:</b> ${Object.values(data)[0]}`;
 

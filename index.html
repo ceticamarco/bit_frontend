@@ -14,7 +14,7 @@
                 <a href="/">Home</a>
             </div>
             <div class="button">
-                <a href="#">Search</a>
+                <a href="/search">Search</a>
             </div>
             <div class="button">
                 <a href="#">Sign Up</a>
@@ -25,42 +25,40 @@
             <hr />
         </div>
         <main>
-                <h1 class="title">Add New Post</h1>
+            <h1 class="title">Add New Post</h1>
 
-                <form class="bit-form" method="POST" onsubmit="return submitForm(event);">
-                    <div class="form-group">
-                        <label for="title" class="bit-form-label">Title</label>
-                        <input type="text" name="title" class="bit-form-input" required />
-                    </div>
-                
-                    <div class="form-group">
-                        <label for="expirationDate" class="bit-form-label">Expiration date</label>
-                        <input type="date" name="expirationDate" class="bit-form-input" />
-                    </div>
-                
-                    <div class="form-group">
-                        <label for="content" class="bit-form-label">Content</label>
-                        <textarea name="content" class="bit-form-input" required></textarea>
-                    </div>
+            <form class="bit-form" method="POST" onsubmit="submitForm(event);">
+                <div class="form-group">
+                    <label for="title" class="bit-form-label">Title</label>
+                    <input type="text" name="title" class="bit-form-input" required />
+                </div>
+            
+                <div class="form-group">
+                    <label for="expirationDate" class="bit-form-label">Expiration date</label>
+                    <input type="date" name="expirationDate" class="bit-form-input" />
+                </div>
+            
+                <div class="form-group">
+                    <label for="content" class="bit-form-label">Content</label>
+                    <textarea name="content" class="bit-form-input" required></textarea>
+                </div>
 
-                    <div id="error-panel">
-                        Error panel
-                    </div>
-                
-                    <h1 class="subtitle">Sign In</h1>
-                
-                    <div class="form-group">
-                        <label for="email" class="bit-form-label">Email</label>
-                        <input type="email" name="email" class="bit-form-input" />
-                    </div>
-                
-                    <div class="form-group">
-                        <label for="password" class="bit-form-label">Password</label>
-                        <input type="password" name="password" class="bit-form-input" />
-                    </div>
-                
-                    <input type="submit" name="send" class="bit-form-button" value="ADD NEW POST"/>
-                </form>
+                <div class="error-panel"></div>
+            
+                <h1 class="subtitle">Sign In</h1>
+            
+                <div class="form-group">
+                    <label for="email" class="bit-form-label">Email</label>
+                    <input type="email" name="email" class="bit-form-input" />
+                </div>
+            
+                <div class="form-group">
+                    <label for="password" class="bit-form-label">Password</label>
+                    <input type="password" name="password" class="bit-form-input" />
+                </div>
+            
+                <button type="submit" name="send" class="bit-form-button">ADD NEW POST</button>
+            </form>
         </main>
 
         <footer>

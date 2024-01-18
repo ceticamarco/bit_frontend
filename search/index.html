@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="Bit Text Sharing" />
+        <link rel="canonical" href="https://bit.marcocetica.com/search" />
+        <link rel="stylesheet" href="/static/css/style.css" />
+        <title>Bit Text Sharing</title>
+    </head>
+    <body onload="searchFromUrl();">
+        <div class="navbar">
+            <div class="button">
+                <a href="/">Home</a>
+            </div>
+            <div class="button">
+                <a href="/search">Search</a>
+            </div>
+            <div class="button">
+                <a href="#">Sign Up</a>
+            </div>
+            <div class="button">
+                <a href="#">ToS</a>
+            </div>
+            <hr />
+        </div>
+        <main>
+            <div class="result-panel">
+                <h1 class="title"></h1>
+                <hr />
+                <div class="metadata"></div>
+
+                <div class="form-group">
+                    <textarea name="content" class="bit-form-input content" readonly></textarea>
+                </div>
+            </div>
+
+            <form class="bit-form" method="GET" id="searchForm" onsubmit="searchPost(this.id.value, event);">
+                <h1 class="title">Search</h1>
+                <div class="form-group">
+                    <label for="id" class="bit-form-label">Post ID</label>
+                    <input type="text" name="id" class="bit-form-input" required />
+                </div>
+
+                <div class="error-panel"></div>
+
+                <button type="submit" name="send" class="bit-form-button">SEARCH</button>
+            </form>
+        </main>
+
+        <footer>
+            &copy; <div id="copy_year"></div> by <a href="https://marcocetica.com">Marco Cetica</a>
+        </footer>
+        
+    </body>
+
+    <script>
+        document.getElementById("copy_year").innerText = new Date().getFullYear();
+    </script>
+    <script src="/static/js/searchPost.js"></script>
+</html>
