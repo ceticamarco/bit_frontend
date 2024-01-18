@@ -20,26 +20,31 @@
                 <a href="#">Sign Up</a>
             </div>
             <div class="button">
-                <a href="#">About</a>
+                <a href="#">ToS</a>
             </div>
             <hr />
         </div>
         <main>
                 <h1 class="title">Add New Post</h1>
-                <form class="bit-form" method="POST" onsubmit="#">
+
+                <form class="bit-form" method="POST" onsubmit="return submitForm(event);">
                     <div class="form-group">
                         <label for="title" class="bit-form-label">Title</label>
-                        <input type="text" name="title" class="bit-form-input" />
+                        <input type="text" name="title" class="bit-form-input" required />
                     </div>
                 
                     <div class="form-group">
-                        <label for="exp" class="bit-form-label">Expiration date</label>
-                        <input type="date" name="exp" class="bit-form-input" />
+                        <label for="expirationDate" class="bit-form-label">Expiration date</label>
+                        <input type="date" name="expirationDate" class="bit-form-input" />
                     </div>
                 
                     <div class="form-group">
                         <label for="content" class="bit-form-label">Content</label>
-                        <textarea name="content" class="bit-form-input"></textarea>
+                        <textarea name="content" class="bit-form-input" required></textarea>
+                    </div>
+
+                    <div id="error-panel">
+                        Error panel
                     </div>
                 
                     <h1 class="subtitle">Sign In</h1>
@@ -67,4 +72,5 @@
     <script>
         document.getElementById("copy_year").innerText = new Date().getFullYear();
     </script>
+    <script src="/static/js/submitForm.js"></script>
 </html>
