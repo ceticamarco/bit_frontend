@@ -35,7 +35,10 @@ const searchPost = (post_id, event) => {
         search_form.style.display = "none";
 
         // Set post title
-        document.querySelector(".title").textContent = data.title;
+        const title = data.user 
+            ? `${data.title} <a style="text-decoration: none;" href="/edit?id=${data.id}">✏️</a>` 
+            : `${data.title}`;
+        document.querySelector(".title").innerHTML = title;
         // Set post author
         const author = data.user ? data.user.username : "anonymous";
         document.querySelector(".metadata").innerHTML = 

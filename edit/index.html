@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
         <meta name="description" content="Bit Text Sharing" />
-        <link rel="canonical" href="https://bit.marcocetica.com/" />
+        <link rel="canonical" href="https://bit.marcocetica.com/edit" />
         <link rel="stylesheet" href="/static/css/style.css" />
         <title>Bit Text Sharing</title>
     </head>
-    <body>
+    <body onload="loadPostId();">
         <div class="navbar">
             <div class="button">
                 <a href="/">Home</a>
@@ -25,39 +25,38 @@
             <hr />
         </div>
         <main>
-            <h1 class="title">Add New Post</h1>
-
-            <form class="bit-form" onsubmit="submitForm(event);">
+            <form class="bit-form" id="updateForm" onsubmit="updatePost(event);">
+                <h1 class="title">Update</h1>
                 <div class="form-group">
-                    <label for="title" class="bit-form-label">Title</label>
+                    <label for="id" class="bit-form-label">Post ID</label>
+                    <input type="text" name="id" class="bit-form-input" readonly required />
+                </div>
+
+                <div class="form-group">
+                    <label for="title" class="bit-form-label">New Title</label>
                     <input type="text" name="title" class="bit-form-input" required />
                 </div>
-            
+
                 <div class="form-group">
-                    <label for="expirationDate" class="bit-form-label">Expiration date</label>
-                    <input type="date" name="expirationDate" class="bit-form-input" />
-                </div>
-            
-                <div class="form-group">
-                    <label for="content" class="bit-form-label">Content</label>
+                    <label for="content" class="bit-form-label">New Content</label>
                     <textarea name="content" class="bit-form-input" required></textarea>
                 </div>
 
                 <div class="error-panel"></div>
-            
+
                 <h1 class="subtitle">Sign In</h1>
-            
+
                 <div class="form-group">
                     <label for="email" class="bit-form-label">Email</label>
-                    <input type="email" name="email" class="bit-form-input" />
+                    <input type="email" name="email" class="bit-form-input" required />
                 </div>
             
                 <div class="form-group">
                     <label for="password" class="bit-form-label">Password</label>
-                    <input type="password" name="password" class="bit-form-input" />
+                    <input type="password" name="password" class="bit-form-input" required />
                 </div>
-            
-                <button type="submit" name="send" class="bit-form-button">ADD NEW POST</button>
+                
+                <button type="submit" name="send" class="bit-form-button">UPDATE</button>
             </form>
         </main>
 
@@ -70,5 +69,5 @@
     <script>
         document.getElementById("copy_year").innerText = new Date().getFullYear();
     </script>
-    <script src="/static/js/submitForm.js"></script>
+    <script src="/static/js/updatePost.js"></script>
 </html>

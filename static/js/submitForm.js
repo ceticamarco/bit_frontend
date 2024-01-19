@@ -50,14 +50,13 @@ const submitForm = (event) => {
         return response.json();
     })
     .then(data => {
-        console.log(data);
         // Redirect user to new post
         window.location.href = `/search?id=${data.post_id}`;
     })
-    .catch(data => {
+    .catch(error => {
         const error_panel = document.querySelector(".error-panel");
         error_panel.style.display = "block";
-        error_panel.innerHTML = `<b>ERROR:</b> ${Object.values(data)[0]}`;
+        error_panel.innerHTML = `<b>ERROR:</b> ${Object.values(error)[0]}`;
 
         setTimeout(() => {
             error_panel.style.display = "none";
