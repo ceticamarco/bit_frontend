@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
         <meta name="description" content="Bit Text Sharing" />
-        <link rel="canonical" href="https://bit.marcocetica.com/signup" />
+        <link rel="canonical" href="https://bit.marcocetica.com/delete" />
         <link rel="stylesheet" href="/static/css/style.css" />
         <title>Bit Text Sharing</title>
     </head>
-    <body>
+    <body onload="loadPostId();">
         <div class="navbar">
             <div class="button">
                 <a href="/">Home</a>
@@ -25,19 +25,19 @@
             <hr />
         </div>
         <main>
-            <h1 class="title">Sign Up</h1>
 
-            <form class="bit-form" id="new_user_form" onsubmit="submitUser(event);">
+            <form class="bit-form" id="deleteForm" onsubmit="deletePost(event);">
+                <h1 class="title">Delete</h1>
                 <div class="form-group">
-                    <label for="username" class="bit-form-label">username</label>
-                    <input type="text" name="username" class="bit-form-input" required />
+                    <label for="id" class="bit-form-label">Post ID</label>
+                    <input type="text" name="id" class="bit-form-input" readonly required />
                 </div>
 
                 <div class="form-group">
                     <label for="email" class="bit-form-label">Email</label>
                     <input type="email" name="email" class="bit-form-input" required />
                 </div>
-
+            
                 <div class="form-group">
                     <label for="password" class="bit-form-label">Password</label>
                     <input type="password" name="password" class="bit-form-input" required />
@@ -45,8 +45,8 @@
 
                 <div class="success-panel"></div>
                 <div class="error-panel"></div>
-
-                <button type="submit" name="send" class="bit-form-button">ADD NEW USER</button>
+                
+                <button type="submit" name="send" class="bit-form-button">UPDATE</button>
             </form>
         </main>
 
@@ -59,5 +59,5 @@
     <script>
         document.getElementById("copy_year").innerText = new Date().getFullYear();
     </script>
-    <script src="/static/js/submitUser.js"></script>
+    <script src="/static/js/deletePost.js"></script>
 </html>

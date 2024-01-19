@@ -35,6 +35,11 @@ const submitUser = (event) => {
         const success_panel = document.querySelector(".success-panel");
         success_panel.style.display = "block";
         success_panel.innerHTML = "<b>OK</b>: user added successfully";
+
+        setTimeout(() => {
+            success_panel.style.display = "none";
+            success_panel.innerHTML = "";
+        }, 5000);
     })
     .catch(error => {
         const error_panel = document.querySelector(".error-panel");

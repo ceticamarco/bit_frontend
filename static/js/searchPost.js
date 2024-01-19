@@ -34,9 +34,10 @@ const searchPost = (post_id, event) => {
         result_panel.style.display = "block";
         search_form.style.display = "none";
 
-        // Set post title
+        // Set post title. Add the edit and the delete button if the user != anonymous
         const title = data.user 
-            ? `${data.title} <a style="text-decoration: none;" href="/edit?id=${data.id}">✏️</a>` 
+            ? (`${data.title} <a style="text-decoration: none;" href="/edit?id=${data.id}">✏️</a> ` +
+               `<a style="text-decoration: none;" href="/delete?id=${data.id}">♻️</a>`)
             : `${data.title}`;
         document.querySelector(".title").innerHTML = title;
         // Set post author
