@@ -15,7 +15,7 @@ const submitUser = (event) => {
     };
 
     // Make the POST request
-    fetch("https://bit.marcocetica.com/api/users/new", {
+    fetch("/api/users/new", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

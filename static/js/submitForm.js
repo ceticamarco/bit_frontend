@@ -33,7 +33,7 @@ const submitForm = (event) => {
     }
 
     // Make the POST request
-    fetch("https://bit.marcocetica.com/api/posts/new", {
+    fetch("/api/posts/new", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

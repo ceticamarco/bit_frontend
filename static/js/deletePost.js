@@ -47,7 +47,7 @@ const deletePost = (event) => {
     }
 
     // Make the DELETE request
-    fetch(`https://bit.marcocetica.com/api/posts/${id_field}`, {
+    fetch(`/api/posts/${id_field}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",

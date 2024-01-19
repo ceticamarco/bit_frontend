@@ -53,7 +53,7 @@ const updatePost = (event) => {
     }
 
     // Make the PUT request
-    fetch(`https://bit.marcocetica.com/api/posts/${id_field}`, {
+    fetch(`/api/posts/${id_field}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",

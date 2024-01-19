@@ -1,6 +1,6 @@
 /**
  * If postID is specified on the URL
- * (e.g., http://bit.marcocetica.com/search/?id=foo),
+ * (e.g., /search/?id=foo),
  * then parse the URL parameter and trigger the search.
  */
 const searchFromUrl = () => {
@@ -15,7 +15,7 @@ const searchPost = (post_id, event) => {
     if(event) event.preventDefault();
 
     // Make the GET request
-    fetch(`https://bit.marcocetica.com/api/posts/${post_id}`, {
+    fetch(`/api/posts/${post_id}`, {
         method: "GET"
     })
     .then(response => {
