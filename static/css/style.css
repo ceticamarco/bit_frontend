@@ -5,6 +5,7 @@
     --btn-fg: #94cdf3;
     --btn-hover: #579ac7;
     --error: #e74f4f;
+    --success: #76e076;
 }
 
 html {
@@ -126,6 +127,12 @@ textarea {
 
 .result-panel {
     display: none;
+}
+
+.success-panel {
+    display: none;
+    margin: 10px 0;
+    color: var(--success);
 }
 
 .metadata {
