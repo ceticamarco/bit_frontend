@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
         <meta name="description" content="Bit Text Sharing" />
-        <link rel="canonical" href="https://bit.marcocetica.com/signup" />
+        <link rel="canonical" href="https://bit.marcocetica.com/user" />
         <link rel="stylesheet" href="/static/css/style.css" />
         <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png">
@@ -20,7 +20,7 @@
                 <a href="/search">Search</a>
             </div>
             <div class="button">
-                <a href="/signup">Sign Up</a>
+                <a href="/user">Account</a>
             </div>
             <div class="button">
                 <a href="/tos">ToS</a>
@@ -46,10 +46,30 @@
                     <input type="password" name="password" class="bit-form-input" required />
                 </div>
 
-                <div class="success-panel"></div>
-                <div class="error-panel"></div>
+                <div class="success-panel" id="create-success-panel"></div>
+                <div class="error-panel" id="create-error-panel"></div>
 
                 <button type="submit" name="send" class="bit-form-button">ADD NEW USER</button>
+            </form>
+
+            <hr />
+            <h1 class="title">Delete Account</h1>
+            
+            <form class="bit-form" onsubmit="deleteUser(event);">
+                <div class="form-group">
+                    <label for="email" class="bit-form-label">Email</label>
+                    <input type="email" name="email" class="bit-form-input" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="bit-form-label">Password</label>
+                    <input type="password" name="password" class="bit-form-input" required />
+                </div>
+
+                <div class="success-panel" id="delete-success-panel"></div>
+                <div class="error-panel" id="delete-error-panel"></div>
+
+                <button type="submit" name="send" class="bit-form-button">DELETE USER</button>
             </form>
         </main>
 
@@ -62,5 +82,5 @@
     <script>
         document.getElementById("copy_year").innerText = new Date().getFullYear();
     </script>
-    <script src="/static/js/submitUser.js"></script>
+    <script src="/static/js/manageUser.js"></script>
 </html>
