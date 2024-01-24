@@ -48,8 +48,13 @@
 
                 <div class="success-panel"></div>
                 <div class="error-panel"></div>
+
+                <div class="form-group">
+                    <label for="delete_cb" class="bit-form-ilabel">Are you sure?</label>
+                    <input type="checkbox" name="delete_cb" class="bit-form-cb" onclick="toggleDeleteButton();"/>
+                </div>
                 
-                <button type="submit" name="send" class="bit-form-button">DELETE</button>
+                <button type="submit" id="delete_post_btn" name="send" class="bit-form-button" disabled>DELETE</button>
             </form>
         </main>
 
@@ -61,6 +66,13 @@
 
     <script>
         document.getElementById("copy_year").innerText = new Date().getFullYear();
+    </script>
+    <script>
+        const toggleDeleteButton = () => {
+            const delete_user_btn = document.getElementById("delete_post_btn");
+
+            delete_user_btn.disabled = !delete_user_btn.disabled;
+        };
     </script>
     <script src="/static/js/deletePost.js"></script>
 </html>

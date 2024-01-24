@@ -46,8 +46,8 @@
                     <input type="password" name="password" class="bit-form-input" required />
                 </div>
 
-                <div class="success-panel" id="create-success-panel"></div>
-                <div class="error-panel" id="create-error-panel"></div>
+                <div class="success-panel"></div>
+                <div class="error-panel"></div>
 
                 <button type="submit" name="send" class="bit-form-button">ADD NEW USER</button>
             </form>
@@ -66,10 +66,15 @@
                     <input type="password" name="password" class="bit-form-input" required />
                 </div>
 
-                <div class="success-panel" id="delete-success-panel"></div>
-                <div class="error-panel" id="delete-error-panel"></div>
+                <div class="success-panel"></div>
+                <div class="error-panel"></div>
 
-                <button type="submit" name="send" class="bit-form-button">DELETE USER</button>
+                <div class="form-group">
+                    <label for="delete_cb" class="bit-form-ilabel">Are you sure?</label>
+                    <input type="checkbox" name="delete_cb" class="bit-form-cb" onclick="toggleDeleteButton();"/>
+                </div>
+
+                <button type="submit" id="delete_user_btn" name="send" class="bit-form-button" disabled>DELETE USER</button>
             </form>
         </main>
 
@@ -81,6 +86,13 @@
 
     <script>
         document.getElementById("copy_year").innerText = new Date().getFullYear();
+    </script>
+    <script>
+        const toggleDeleteButton = () => {
+            const delete_user_btn = document.getElementById("delete_user_btn");
+
+            delete_user_btn.disabled = !delete_user_btn.disabled;
+        };
     </script>
     <script src="/static/js/manageUser.js"></script>
 </html>

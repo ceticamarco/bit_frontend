@@ -35,7 +35,7 @@ const submitUser = (event) => {
         return response.json();
     })
     .then(_ => {
-        const success_panel = document.querySelector("#create-success-panel");
+        const success_panel = submit_form.querySelector(".success-panel");
         success_panel.style.display = "block";
         success_panel.innerHTML = "<b>OK</b>: user added successfully";
 
@@ -45,7 +45,7 @@ const submitUser = (event) => {
         }, 5000);
     })
     .catch(error => {
-        const error_panel = document.querySelector("#create-error-panel");
+        const error_panel = submit_form.querySelector(".error-panel");
         error_panel.style.display = "block";
         error_panel.innerHTML = `<b>ERROR:</b> ${Object.values(error)[0]}`;
 
@@ -91,7 +91,7 @@ const deleteUser = (event) => {
         return response.json();
     })
     .then(_ => {
-        const success_panel = document.querySelector("#delete-success-panel");
+        const success_panel = delete_form.querySelector(".success-panel");
         success_panel.style.display = "block";
         success_panel.innerHTML = "<b>OK</b>: user deleted successfully";
 
@@ -101,7 +101,7 @@ const deleteUser = (event) => {
         }, 5000);
     })
     .catch(error => {
-        const error_panel = document.querySelector("#delete-error-panel");
+        const error_panel = delete_form.querySelector(".error-panel");
         error_panel.style.display = "block";
         error_panel.innerHTML = `<b>ERROR:</b> ${Object.values(error)[0]}`;
 

@@ -83,6 +83,11 @@ footer > #copy_year {
     font-size: 15px;
 }
 
+.bit-form-ilabel {
+    display: inline-block;
+    font-size: 15px;
+}
+
 .bit-form-input {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -97,6 +102,10 @@ footer > #copy_year {
     margin-bottom: 5px;
 }
 
+.bit-form-cb {
+    accent-color: var(--btn-off);
+}
+
 .bit-form-button {
     background-color: var(--btn-bg);
     color: var(--btn-fg);
@@ -107,6 +116,11 @@ footer > #copy_year {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
+}
+
+.bit-form-button:disabled {
+    text-decoration: line-through;
+    color: var(--btn-hover);
 }
 
 .bit-form-button:hover {
