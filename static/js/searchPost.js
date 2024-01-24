@@ -30,7 +30,7 @@ const searchPost = (post_id, event) => {
     .then(data => {
         // Show output panel and hide search form
         const result_panel = document.querySelector(".result-panel");
-        const search_form = document.querySelector(".bit-form");
+        const search_form = document.getElementById("search_form");
         result_panel.style.display = "block";
         search_form.style.display = "none";
 

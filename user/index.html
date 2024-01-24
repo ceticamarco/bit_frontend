@@ -30,7 +30,7 @@
         <main>
             <h1 class="title">Sign Up</h1>
 
-            <form class="bit-form" id="new_user_form" onsubmit="submitUser(event);">
+            <form class="bit-form" method="POST" id="submit_user_form" onsubmit="submitUser(event);">
                 <div class="form-group">
                     <label for="username" class="bit-form-label">username</label>
                     <input type="text" name="username" class="bit-form-input" required />
@@ -55,7 +55,7 @@
             <hr />
             <h1 class="title">Delete Account</h1>
             
-            <form class="bit-form" onsubmit="deleteUser(event);">
+            <form class="bit-form" method="POST" id="delete_user_form" onsubmit="deleteUser(event);">
                 <div class="form-group">
                     <label for="email" class="bit-form-label">Email</label>
                     <input type="email" name="email" class="bit-form-input" required />

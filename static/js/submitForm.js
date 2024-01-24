@@ -2,15 +2,18 @@ const submitForm = (event) => {
     // Prevent form submission
     event.preventDefault();
 
-    // Form
+    // Form Data
     let form_data = {};
 
+    // Get form
+    const submit_form = document.getElementById("submit_post_form");
+
     // Get form data
-    const title_field = document.querySelector('[name="title"]').value;
-    const content_field = document.querySelector('[name="content"]').value;
-    const exp_field = document.querySelector('[name="expirationDate"]').value;
-    const email_field = document.querySelector('[name="email"]').value;
-    const password_field = document.querySelector('[name="password"]').value;
+    const title_field = submit_form.querySelector('[name="title"]').value;
+    const content_field = submit_form.querySelector('[name="content"]').value;
+    const exp_field = submit_form.querySelector('[name="expirationDate"]').value;
+    const email_field = submit_form.querySelector('[name="email"]').value;
+    const password_field = submit_form.querySelector('[name="password"]').value;
 
     // Anonymous post
     if(email_field.length === 0 || password_field.length === 0) {
