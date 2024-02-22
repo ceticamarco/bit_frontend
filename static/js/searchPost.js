@@ -45,7 +45,7 @@ const searchPost = (post_id, event) => {
         document.querySelector(".metadata").innerHTML = 
             `<span class="metadata-el">user</span>: <code>${author}</code>&nbsp;/&nbsp;`;
         // Set post expiration date
-        const exp = data.expirationDate ? data.expirationDate : "never";
+        const exp = data.expirationDate;
         document.querySelector(".metadata").innerHTML += 
             `<span class="metadata-el">expiration</span>: <code>${exp}</code>&nbsp;/&nbsp;`;
         // Set post ID
