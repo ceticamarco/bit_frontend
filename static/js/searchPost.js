@@ -54,7 +54,7 @@ const searchPost = (post_id, event) => {
             `<span class="metadata-el">ID</span>: <code><a href="/search?id=${id}">${id}</a></code>&nbsp;/&nbsp;`;
         // Add 'raw mode' button
         document.querySelector(".metadata").innerHTML +=
-            `<code><a style="text-decoration: none;" href="/api/posts/raw/${data.id}">raw</a></code>`;
+            `<span class="metadata-el"><a href="/api/posts/raw/${data.id}">raw</a></span>`;
         // Set post content
         document.querySelector(".content").textContent = data.content;
     })
