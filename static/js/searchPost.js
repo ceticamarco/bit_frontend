@@ -35,7 +35,7 @@ const searchPost = (post_id, event) => {
         search_form.style.display = "none";
 
         // Set post title. Add the edit and the delete button if the user != anonymous
-        const title = data.user 
+        let title = data.user 
             ? (`${data.title} <a style="text-decoration: none;" href="/edit?id=${data.id}">✏️</a> ` +
                `<a style="text-decoration: none;" href="/delete?id=${data.id}">♻️</a>`)
             : `${data.title}`;
@@ -51,7 +51,10 @@ const searchPost = (post_id, event) => {
         // Set post ID
         const id = data.id;
         document.querySelector(".metadata").innerHTML += 
-            `<span class="metadata-el">ID</span>: <code><a href="/search?id=${id}">${id}</a></code>`;
+            `<span class="metadata-el">ID</span>: <code><a href="/search?id=${id}">${id}</a></code>&nbsp;/&nbsp;`;
+        // Add 'raw mode' button
+        document.querySelector(".metadata").innerHTML +=
+            `<code><a style="text-decoration: none;" href="/api/posts/raw/${data.id}">raw</a></code>`;
         // Set post content
         document.querySelector(".content").textContent = data.content;
     })
