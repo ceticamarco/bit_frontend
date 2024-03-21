@@ -183,3 +183,9 @@ textarea {
         font-size: 10px;
     }
 }
+
+@media (max-width: 400px) {
+    .bit-form-input {
+        font-size: 13px;
+    }
+}
